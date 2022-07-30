@@ -1,7 +1,7 @@
 :root {
   --wyyyy-bg: rgb(248 249 253);
   --wyyyy-font: rgb(62 70 91);
-  --wyyyy-shadow: rgba(62 70 91 / 12%);
+  --wyyyy-shadow: rgba(62 70 91 / 15%);
   --wyyyy-shadow-hover: rgba(62 70 91 / 20%);
 }
 
@@ -41,6 +41,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  transition: filter 1s;
 }
 .ani-wrapper:hover {
   filter: blur(5px);
