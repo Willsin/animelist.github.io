@@ -2,8 +2,8 @@
   --wyyyy-bg: rgb(248 249 253);
   --wyyyy-font: rgb(62 70 91);
 
-  --wyyyy-shadow: rgba(62 70 91 / 15%);
-  --wyyyy-shadow-dark: rgba(62 70 91 / 20%);
+  --wyyyy-shadow: rgba(62 70 91 / 22%);
+  --wyyyy-shadow-dark: rgba(62 70 91 / 32%);
 }
 
 .ani-cell {
