@@ -25,9 +25,9 @@
                 <img class="ani-img" src="${ this.pic_url }" alt="">
               </div>
               <div class="ani-text">
-                <span class="ani-title">${ this.title }</span>
-                <span class="ani-description">更新至第 ${ this.episode } 集</span>
-                <span class="ani-description">${ this.update }</span>
+                <span class="ani-title" contenteditable="true">${ this.title }</span>
+                <span class="ani-description" contenteditable="true">更新至第 ${ this.episode } 集</span>
+                <span class="ani-description" contenteditable="true">${ this.update }</span>
               </div>
             </div>
           </div>
