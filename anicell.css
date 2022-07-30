@@ -41,7 +41,7 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  transition: filter 1s;
+  transition: filter 0.5s;
 }
 .ani-wrapper:hover {
   filter: blur(5px);
