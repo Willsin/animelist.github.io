@@ -1,8 +1,10 @@
 :root {
   --wyyyy-bg: rgb(248 249 253);
   --wyyyy-font: rgb(62 70 91);
+  
+  --wyyyy-shadow-light: rgba(62 70 91 / 6%);
   --wyyyy-shadow: rgba(62 70 91 / 15%);
-  --wyyyy-shadow-hover: rgba(62 70 91 / 20%);
+  --wyyyy-shadow-dark: rgba(62 70 91 / 20%);
 }
 
 .ani-cell {
@@ -13,7 +15,7 @@
   height: 60px;
   margin: 10px 10px 0 10px;
   padding: 19px;
-  border: solid 1px var(--wyyyy-shadow);
+  border: solid 1px var(--wyyyy-shadow-light);
   overflow: hidden;
 
   box-shadow: 0 0 20px var(--wyyyy-shadow);
@@ -23,7 +25,7 @@
 }
 
 .ani-cell:hover {
-  box-shadow: 0 0 20px var(--wyyyy-shadow-hover);
+  box-shadow: 0 0 20px var(--wyyyy-shadow-dark);
 }
 /*.ani-cell * {
   border: 0.3px solid ;
@@ -64,7 +66,7 @@
   min-width: 45px;
   height: 80px;
   pointer-events: none;
-  filter: drop-shadow(0 0 3px var(--wyyyy-shadow-hover))
+  filter: drop-shadow(0 0 3px var(--wyyyy-shadow-dark))
 }
 .ani-text {
   height: 80px;
