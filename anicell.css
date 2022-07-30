@@ -16,7 +16,7 @@
   padding: 20px;
   overflow: hidden;
 
-  box-shadow: 0 0 20px var(--wyyyy-shadow);
+  box-shadow: 0 5px 20px var(--wyyyy-shadow);
   border-radius: 20px;
   
   transition: all 0.2s;
@@ -59,7 +59,7 @@
   justify-content: space-around;
 }
 .ani-img {
-  border-radius: 8px;
+  border-radius: 6px;
   max-width: 145px;
   min-width: 45px;
   height: 80px;
