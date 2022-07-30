@@ -64,6 +64,7 @@
         height: 80px;
         width: calc(100% - 150px);
         user-select: none;
+        outline: none;
 
         display: flex;
         flex-direction: column;
