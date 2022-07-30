@@ -6,7 +6,7 @@
  * */
 
 inertanceDarg.init({
-  dargDom: 'ani-cell'
+  dargDom: '.ani-cell'
 })
 
 let inertanceDarg = {
