@@ -28,12 +28,13 @@
 
     <input id='changeName' type='text'></input>
     <input id='changeValue' type='text'></input>
-    <button onclick='changeAttribute()'>Change!</button>
+    <button onclick='change_Attribute()'>Change!</button>
     <script>
       let aniEN = document.querySelector('#ani-en')
       let cN = document.querySelector('#changeName')
       let cV = document.querySelector('#changeValue')
-      function changeAttribute() {
+      document.innerHTML += 'ok'
+      function change_Attribute() {
         aniEN[cN.value] = cV.value
         document.innerHTML += cN.value + ' = ' + cV.value
       }
