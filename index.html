@@ -25,25 +25,19 @@
       update="Sunday 01:00"
       episode="4"
       isblur="false"></ani-cell>
-     
-      <script>
-      function change_() {
-        alert('3')
-      }
-      </script>
-      
+
+
     <input id='changeName' type='text'></input>
     <input id='changeValue' type='text'></input>
-    <button onclick='change_()'>Change!</button>
     <script>
       let aniEN = document.querySelector('#ani-en')
       let cN = document.querySelector('#changeName')
       let cV = document.querySelector('#changeValue')
-      alert('1')
       function change_Attribute() {
         aniEN[cN.value] = cV.value
-        alert('2')
+        alert(cN.value + ' = ' + cV.value)
       }
     </script>
+    <button onclick='change_Attribute()'>Change!</button>
   </body>
 </html>
