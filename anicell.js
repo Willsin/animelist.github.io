@@ -4,7 +4,7 @@ class AniCell extends HTMLElement {
     this.pic_url = this.getAttribute('pic_url') || undefined
     this.update = this.getAttribute('update') || undefined
     this.episode = this.getAttribute('episode') || undefined
-    this.isblur = this.getAttribute('isblur') || undefined
+    this.isblur = this.getAttribute('isblur') === 'true'
     this.render() // 初次渲染
   }
   disconnectedCallback() {}
