@@ -14,8 +14,8 @@ class AniCell extends HTMLElement {
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue) {
-    this[attributeName] = newValue || undefined
-    render() // 重新渲染
+    this[attributeName] = newValue
+    this.render() // 重新渲染
   }
   adoptedCallback() {}
 
