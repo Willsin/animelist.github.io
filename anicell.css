@@ -64,7 +64,6 @@
         height: 80px;
         width: calc(100% - 150px);
         user-select: none;
-        outline: none;
 
         display: flex;
         flex-direction: column;
@@ -75,6 +74,7 @@
         width: 100%;
         height: 34px;
         line-height: 30px;
+        outline: none;
 
         overflow: hidden;
         text-overflow: ellipsis;
@@ -86,4 +86,9 @@
       }
       .ani-description {
         font-size: 11px;
+        outline: none;
+     
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
