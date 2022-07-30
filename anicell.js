@@ -1,6 +1,12 @@
 class AniCell extends HTMLElement {
-  connectedCallback() { 
+  connectedCallback() {
     this.render() // 初次渲染
+
+    // 纯数字输入
+    document.querySelector('.ani-episode').oninput = function() {
+      this.innerHTML = this.innerHTML.replace(/[\D]/g, '')
+      keepLastIndex(this)
+    }
   }
   disconnectedCallback() {}
 
@@ -28,7 +34,7 @@ class AniCell extends HTMLElement {
           </div>
           <div class="ani-text">
             <span class="ani-title" contenteditable="true">${ this.title }</span>
-            <span class="ani-description">更新至第 <span class="ani-description" contenteditable="true">${ this.episode }</span> 集</span>
+            <span class="ani-description">更新至第 <span class="ani-episode" contenteditable="true">${ this.episode }</span> 集</span>
             <span class="ani-description" contenteditable="true">${ this.update }</span>
           </div>
         </div>
@@ -38,3 +44,20 @@ class AniCell extends HTMLElement {
 }
 
 customElements.define('ani-cell', AniCell)
+
+
+
+function keepLastIndex(obj) {
+  if (window.getSelection) {
+    obj.focus();
+    var range = window.getSelection();
+    range.selectAllChildren(obj);
+    range.collapseToEnd();
+  }
+  else if (document.selection) {
+    var range = document.selection.createRange();
+    range.moveToElementText(obj);
+    range.collapse(false);
+    range.select();
+  }
+}
