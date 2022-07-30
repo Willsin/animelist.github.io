@@ -1,10 +1,5 @@
 class AniCell extends HTMLElement {
   connectedCallback() { 
-    this.title = this.getAttribute('title') || undefined
-    this.pic_url = this.getAttribute('pic_url') || undefined
-    this.update = this.getAttribute('update') || undefined
-    this.episode = this.getAttribute('episode') || undefined
-    this.isblur = this.getAttribute('isblur') === 'true'
     this.render() // 初次渲染
   }
   disconnectedCallback() {}
@@ -14,13 +9,17 @@ class AniCell extends HTMLElement {
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue) {
-    this[attributeName] = newValue
     this.render() // 重新渲染
   }
   adoptedCallback() {}
 
   // 渲染函数
   render() {
+    this.title = this.getAttribute('title') || undefined
+    this.pic_url = this.getAttribute('pic_url') || undefined
+    this.update = this.getAttribute('update') || undefined
+    this.episode = this.getAttribute('episode') || undefined
+    this.isblur = this.getAttribute('isblur') === 'true'
     this.innerHTML = `
       <div class="ani-cell">
         <div class="ani-wrapper ${this.isblur ? 'blurself' : ''}">
