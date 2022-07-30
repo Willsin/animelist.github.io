@@ -43,7 +43,7 @@
   align-items: center;
   transition: filter 0.5s;
 }
-.ani-wrapper:hover {
+.blurself {
   filter: blur(5px);
 }
 
