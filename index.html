@@ -34,7 +34,7 @@
       let cN = document.querySelector('#changeName')
       let cV = document.querySelector('#changeValue')
       function change_Attribute() {
-        aniEN[cN.value] = cV.value
+        aniEN.setAttribute(cN.value, cV.value)
       }
     </script>
     <button onclick='change_Attribute()'>Change!</button>
