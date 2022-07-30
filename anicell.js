@@ -20,7 +20,6 @@ class AniCell extends HTMLElement {
     this.update = this.getAttribute('update') || undefined
     this.episode = this.getAttribute('episode') || undefined
     this.isblur = this.getAttribute('isblur') === 'true'
-    alert(this.title+this.pic_url+this.update+this.episode+this.isblur)
     this.innerHTML = `
       <div class="ani-cell">
         <div class="ani-wrapper ${this.isblur ? 'blurself' : ''}">
