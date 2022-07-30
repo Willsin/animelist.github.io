@@ -76,8 +76,6 @@
         line-height: 30px;
         outline: none;
 
-        overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
 
         font-weight: bold;
@@ -87,8 +85,6 @@
       .ani-description {
         font-size: 11px;
         outline: none;
-     
-        overflow: hidden;
-        text-overflow: ellipsis;
+
         white-space: nowrap;
       }
