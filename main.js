@@ -23,9 +23,9 @@ document.querySelector('#addAni').addEventListener('click', () => {
   loadAniCell([{}])
 })
 
-document.querySelectorAll('ani-cell').forEach(ele => {
+//document.querySelectorAll('ani-cell').forEach(ele => {
+  let ele = document.querySelector('#cellBox')
   ele.onpointerdown = event => {
-    alert(1)
     ele.setPointerCapture(event.pointerId)
 
     ele.onpointermove = event => {
@@ -36,10 +36,9 @@ document.querySelectorAll('ani-cell').forEach(ele => {
       ele.onpointermove = null
       ele.onpointerup = null
       ele.style.left = null
-      alert(2)
     }
   }
-})
+//})
 
 
 
