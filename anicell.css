@@ -9,6 +9,7 @@
 
 .ani-cell {
   position: relative;
+  left: 100px;
   background-color: var(--wyyyy-bg);
   color: var(--wyyyy-font);
   width: calc(100% - 60px);

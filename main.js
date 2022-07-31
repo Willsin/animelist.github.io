@@ -14,7 +14,7 @@ const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 
 
 loadAniCell(loadJSON())
-
+cellSwipeListen()
 
 // 关闭前保存
 window.onbeforeunload = () => saveJSON()
@@ -36,7 +36,7 @@ function cellSwipeListen() {
       ele.onpointerup = () => {
         ele.onpointermove = null
         ele.onpointerup = null
-        ele.style.left = null
+        ele.style.left = ''
       }
     }
   })
@@ -60,7 +60,6 @@ function loadAniCell(arr) {
       document.querySelector('#cellBox').append(aniCell)
     }
   })
-  cellSwipeListen()
 }
 
 
