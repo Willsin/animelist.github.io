@@ -15,7 +15,7 @@ ani-cell {
 
 .ani-cell {
   position: relative;
-  left: 10px;
+  left: 0;
   right: 0;
   background-color: var(--wyyyy-bg);
   color: var(--wyyyy-font);

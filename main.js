@@ -77,7 +77,14 @@ function saveJSON() {
       isblur: item.isblur
     })
   })
-  localStorage.setItem('aniArr', JSON.stringify(aniArr))
+  // localStorage.setItem('aniArr', JSON.stringify(aniArr))
+  localStorage.setItem('aniArr', JSON.stringify([{
+    title: "Engage Kiss",
+    pic_url: "https://engage-kiss.com/assets/img/top/img_main_pc.jpg",
+    update: "Sunday 01:00",
+    episode: "5",
+    isblur: "false"
+  }]))
 }
 
 function loadJSON() {
