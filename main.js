@@ -22,21 +22,17 @@ window.onbeforeunload = () => saveJSON()
 // 加载 ani-cell 实例
 function loadAniCell(arr) {
   if (arr === undefined) return
-  alert(1)
   arr.forEach((obj, index) => {
     if (typeof obj === 'object') {
-      alert(2)
-      document.body.append(document.createElement('ani-cell',
-        {
-          title: obj.title,
-          pic_url: obj.pic_url,
-          update: obj.update,
-          episode: obj.episode,
-          isblur: obj.isblur
-        }))
+      let aniCell = document.createElement('ani-cell')
+
+      standAniArrName.forEach(name => {
+        aniCell.setAttribute(name, obj[name])
+      })
+
+      document.body.append(aniCell)
     }
   })
-  alert(4)
 }
 
 
