@@ -65,7 +65,7 @@ function saveJSON() {
   update: "Friday",
   episode: "16",
   isblur: "false"
-}])
+}]))
 }
 
 function loadJSON() {
