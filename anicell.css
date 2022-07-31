@@ -1,19 +1,3 @@
-:root {
-  --wyyyy-bg: rgb(248 249 253);
-  --wyyyy-font: rgb(62 70 91);
-  --wyyyy-shadow: rgba(62 70 91 / 22%);
-  --wyyyy-shadow-dark: rgba(62 70 91 / 32%);
-
-  --cyan-50: #E0F7FA;
-  --cyan-100: #B2EBF2;
-  --cyan-200: #80DEEA;
-  --cyan-300: #4DD0E1;
-  --cyan-700: #0097A7;
-  --cyan-800: #00838F;
-  --cyan-900: #006064;
-  --cyan-A10: #84FFFF;
-}
-
 #cellBox {
   position: relative;
   width: 100%;
@@ -109,28 +93,4 @@
   outline: none;
 
   white-space: nowrap;
-}
-
-
-
-
-#addAni {
-  position: relative;
-  float: right;
-
-  box-sizing: content-box;
-  outline: none;
-  width: fit-content;
-  height: fit-content;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--cyan-800);
-  text-shadow: 0 1px 2px var(--cyan-300);
-  background: var(--cyan-200);
-  box-shadow: 0 3px 15px var(--cyan-100);
-  user-select: none;
-  margin: 40px;
-  padding: 10px 25px 10px 25px;
-  border: none;
-  border-radius: 50px;
 }
