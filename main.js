@@ -18,6 +18,14 @@ window.onbeforeunload = () => saveJSON()
 
 //  document.body.innerHTML += JSON.stringify(loadJSON())
 
+document.querySelector('#addAni').addEventListener('click', () => {
+  alert(1)
+  loadAniCell([{}])
+})
+
+
+
+
 // 加载 ani-cell 实例
 function loadAniCell(arr) {
   if (arr === undefined) return
@@ -33,10 +41,6 @@ function loadAniCell(arr) {
     }
   })
 }
-
-
-
-
 
 
 
