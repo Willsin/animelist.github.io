@@ -1,4 +1,4 @@
-customElements.define('ani-cell', class AniCell extends HTMLElement {
+customElements.define('ani-cell', class AniCell extends HTMLDivElement {
   connectedCallback() {
     this.render() // 初次渲染
   }
