@@ -116,7 +116,6 @@
 
 #addAni {
   position: relative;
-  margin: 40px;
   float: right;
 
   box-sizing: content-box;
@@ -130,7 +129,7 @@
   background: var(--cyan-200);
   box-shadow: 0 3px 15px var(--cyan-100);
   user-select: none;
-  margin: 0;
+  margin: 40px;
   padding: 10px 25px 10px 25px;
   border: none;
   border-radius: 50px;
