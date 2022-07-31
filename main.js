@@ -14,7 +14,7 @@ const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 
 
 loadAniCell(loadJSON())
-setInterval(cellSwipeListen(), 1000)
+cellSwipeListen()
 
 // 关闭前保存
 window.onbeforeunload = () => saveJSON()
@@ -25,7 +25,7 @@ document.querySelector('#addAni').onclick = () => {
 }
 
 function cellSwipeListen() {
-  document.querySelectorAll('.ani-cell').forEach(ele => {
+  document.querySelectorAll('div.ani-cell').forEach(ele => {
     ele.onpointerdown = event => {
       ele.setPointerCapture(event.pointerId)
 
