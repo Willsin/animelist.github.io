@@ -1,9 +1,9 @@
 #cellBox {
-  position: relative;
-  width: 100%;
-  height: fit-content;
+  position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: fit-content;
   padding: 0 0 100px 0;
 }
 
