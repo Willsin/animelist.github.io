@@ -24,18 +24,18 @@ function loadAniCell(arr) {
   if (arr === undefined) return
   arr.forEach((obj, index) => {
     if (typeof obj === 'Object') {
-      document.innerHTML += `
-        <ani-cell
-          title="${ obj.title }"
-          pic_url="${ obj.pic_url }"
-          update="${ obj.update }"
-          episode="${ obj.episode }"
-          isblur="${ obj.isblur }"
-        ></ani-cell>
-      `
+      document.appendChild(document.createElement('ani-cell',
+        {
+          title: obj.title,
+          pic_url: obj.pic_url,
+          update: obj.update,
+          episode: obj.episode,
+          isblur: obj.isblur
+        }))
     }
   })
 }
+
 
 
 
