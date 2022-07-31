@@ -57,7 +57,7 @@ function saveJSON() {
 
 function loadJSON() {
   if (localStorage.getItem('aniArr')) {
-    document.innerHTML += localStorage.getItem('aniArr')
+    alert(localStorage.getItem('aniArr'))
     return JSON.parse(localStorage.getItem('aniArr'))
   }
 }
