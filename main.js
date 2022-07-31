@@ -26,7 +26,7 @@ function loadAniCell(arr) {
   arr.forEach((obj, index) => {
     if (typeof obj === 'object') {
       alert(2)
-      alert(document.createElement('ani-cell',
+      document.appendChild(document.createElement('ani-cell',
         {
           title: obj.title,
           pic_url: obj.pic_url,
