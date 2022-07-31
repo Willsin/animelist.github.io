@@ -17,7 +17,7 @@ const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 
 document.addEventListener("DOMContentLoaded", loadAniCell(loadJSON()))
 window.onbeforeunload = () => saveJSON()
-document.body.append(localStorage.getItem('aniArr'))
+document.body.innerHTML += localStorage.getItem('aniArr')
 
 // 加载 ani-cell 实例
 function loadAniCell(arr) {
