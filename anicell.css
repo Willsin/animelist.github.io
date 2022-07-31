@@ -15,7 +15,7 @@
 }
 
 #cellBox {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: fit-content;
   left: 0;
@@ -115,6 +115,10 @@
 
 
 #addAni {
+  position: relative;
+  margin: 40px;
+  float: right;
+
   box-sizing: content-box;
   outline: none;
   width: fit-content;
