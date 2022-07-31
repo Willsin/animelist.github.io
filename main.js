@@ -18,9 +18,27 @@ window.onbeforeunload = () => saveJSON()
 
 //  document.body.innerHTML += JSON.stringify(loadJSON())
 
+// 事件监听
 document.querySelector('#addAni').addEventListener('click', () => {
   loadAniCell([{}])
 })
+
+document.querySelectorAll('ani-cell').forEach(ele => {
+  ele.onpointerdown = event => {
+    ele.setPointerCapture(event.pointerId)
+
+    ele.onpointermove = event => {
+      ele.style.left = event.clientX + 'px'
+    }
+
+    ele.onpointerup = () => {
+      ele.onpointermove = null
+      ele.onpointerup = null
+      ele.style.left = null
+    }
+  }
+})
+
 
 
 
