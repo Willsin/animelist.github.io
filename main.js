@@ -27,7 +27,7 @@ function loadAniCell(arr) {
         aniCell.setAttribute(name, obj[name])
       })
 
-      document.body.append(aniCell)
+      document.querySelector('#cellBox').append(aniCell)
     }
   })
 }

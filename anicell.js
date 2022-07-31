@@ -20,7 +20,7 @@ customElements.define('ani-cell', class AniCell extends HTMLElement {
     this.update = this.getAttribute('update') || undefined
     this.episode = this.getAttribute('episode') || undefined
     this.isblur = this.getAttribute('isblur') === 'true'
-    document.querySelector('#cellBox').innerHTML = `
+    this.innerHTML = `
       <div class="ani-cell">
         <div class="ani-wrapper ${this.isblur ? 'blurself' : ''}">
           <div class="ani-img-wrapper">
