@@ -14,7 +14,7 @@ const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 
 
 loadAniCell(loadJSON())
-setTimeout({ cellSwipeListen() }, 0)
+setInterval(cellSwipeListen(), 1000)
 
 // 关闭前保存
 window.onbeforeunload = () => saveJSON()
