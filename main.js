@@ -19,7 +19,6 @@ window.onbeforeunload = () => saveJSON()
 //  document.body.innerHTML += JSON.stringify(loadJSON())
 
 document.querySelector('#addAni').addEventListener('click', () => {
-  alert(1)
   loadAniCell([{}])
 })
 
