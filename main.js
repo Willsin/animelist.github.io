@@ -22,9 +22,11 @@ window.onbeforeunload = () => saveJSON()
 // 加载 ani-cell 实例
 function loadAniCell(arr) {
   if (arr === undefined) return
+  alert(1)
   arr.forEach((obj, index) => {
     if (typeof obj === 'Object') {
-      document.appendChild(document.createElement('ani-cell',
+      alert(2)
+      alert(document.createElement('ani-cell',
         {
           title: obj.title,
           pic_url: obj.pic_url,
@@ -34,6 +36,7 @@ function loadAniCell(arr) {
         }))
     }
   })
+  alert(4)
 }
 
 
@@ -57,7 +60,6 @@ function saveJSON() {
 
 function loadJSON() {
   if (localStorage.getItem('aniArr')) {
-    alert(localStorage.getItem('aniArr'))
     return JSON.parse(localStorage.getItem('aniArr'))
   }
 }
