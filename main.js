@@ -52,6 +52,7 @@ function loadAniCell(arr) {
   arr.forEach(obj => {
     if (typeof obj === 'object') {
       let aniCell = document.createElement('ani-cell')
+      aniCell.className = 'ani-cell'
 
       standAniArrName.forEach(name => {
         aniCell.setAttribute(name, obj[name])

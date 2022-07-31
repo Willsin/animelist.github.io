@@ -7,7 +7,7 @@
   padding: 0 0 100px 0;
 }
 
-ani-cell {
+.ani-cell {
   position: relative;
   left: 0;
   background-color: var(--wyyyy-bg);
@@ -24,10 +24,10 @@ ani-cell {
   transition: all 0.2s;
 }
 
-ani-cell:hover {
+.ani-cell:hover {
   box-shadow: 0 5px 20px var(--wyyyy-shadow-dark);
 }
-/*ani-cell * {
+/*.ani-cell * {
   border: 0.3px solid ;
 }*/
 .ani-wrapper {
