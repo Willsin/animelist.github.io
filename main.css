@@ -14,6 +14,13 @@
   --cyan-A10: #84FFFF;
 }
 
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: Robert;
+}
+
+
 #addAni {
   position: fixed;
   right: 0;
@@ -29,13 +36,13 @@
 
   color: #666666;
   text-shadow: 0 1px 2px #66666644;
-  background: #ffffff20;
+  background-color: #ffffff20;
   filter: blue(5px);
 
 /*
   color: var(--cyan-800);
   text-shadow: 0 1px 2px var(--cyan-300);
-  background: var(--cyan-200);
+  background-color: var(--cyan-200);
   box-shadow: 0 3px 15px var(--cyan-200);
 */
 
