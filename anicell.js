@@ -1,16 +1,6 @@
 customElements.define('ani-cell', class AniCell extends HTMLElement {
   connectedCallback() {
     this.render() // 初次渲染
-
-    let observer = new MutationObserver(mutationRecords => {
-      console.log(mutationRecords.toString())
-    })
-
-    observer.observe(this, {
-      childList: true,
-      subtree: true,
-      characterDataOldValue: false
-    })
   }
 
   disconnectedCallback() {}
@@ -37,9 +27,9 @@ customElements.define('ani-cell', class AniCell extends HTMLElement {
             <img class="ani-img" src="${ this.pic_url }" alt="">
           </div>
           <div class="ani-text">
-            <span class="ani-title" contenteditable="true">${ this.title }</span>
-            <span class="ani-description">更新至第 <span class="ani-description ani-episode" contenteditable="true">${ this.episode }</span> 集</span>
-            <span class="ani-description" contenteditable="true">${ this.update }</span>
+            <span class="ani-title">${ this.title }</span>
+            <span class="ani-description">更新至第 <span class="ani-description ani-episode">${ this.episode }</span> 集</span>
+            <span class="ani-description">${ this.update }</span>
           </div>
         </div>
       </div>
