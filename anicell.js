@@ -1,6 +1,17 @@
 customElements.define('ani-cell', class AniCell extends HTMLElement {
   connectedCallback() {
     this.render() // 初次渲染
+
+    let observer = new MutationObserver(mutationRecords => {
+      
+      alert(mutationRecords)
+    })
+
+    observer.observe(this, {
+      childList: true,
+      subtree: true,
+      characterDataOldValue: false
+    })
   }
   disconnectedCallback() {}
 
