@@ -21,16 +21,14 @@ customElements.define('ani-cell', class AniCell extends HTMLElement {
     this.episode = this.getAttribute('episode') || undefined
     this.isblur = this.getAttribute('isblur') === 'true'
     this.innerHTML = `
-      <div class="ani-cell">
-        <div class="ani-wrapper ${this.isblur ? 'blurself' : ''}">
-          <div class="ani-img-wrapper">
-            <img class="ani-img" src="${ this.pic_url }" alt="">
-          </div>
-          <div class="ani-text">
-            <span class="ani-title">${ this.title }</span>
-            <span class="ani-description">更新至第 <span class="ani-description ani-episode">${ this.episode }</span> 集</span>
-            <span class="ani-description">${ this.update }</span>
-          </div>
+      <div class="ani-wrapper ${this.isblur ? 'blurself' : ''}">
+        <div class="ani-img-wrapper">
+          <img class="ani-img" src="${ this.pic_url }" alt="">
+        </div>
+        <div class="ani-text">
+          <span class="ani-title">${ this.title }</span>
+          <span class="ani-description">更新至第 <span class="ani-description ani-episode">${ this.episode }</span> 集</span>
+          <span class="ani-description">${ this.update }</span>
         </div>
       </div>
     `
