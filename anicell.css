@@ -9,14 +9,14 @@
 
 ani-cell {
   position: relative;
-  left: 0;
-  right: 0;
   width: 100%;
   height: fit-content;
 }
 
 .ani-cell {
   position: relative;
+  left: 0;
+  right: 0;
   background-color: var(--wyyyy-bg);
   color: var(--wyyyy-font);
   width: calc(100% - 60px);
