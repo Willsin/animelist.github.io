@@ -3,7 +3,7 @@ customElements.define('ani-cell', class AniCell extends HTMLElement {
     this.render() // 初次渲染
 
     let observer = new MutationObserver(mutationRecords => {
-      document.body.innerHTML += mutationRecords.toString()
+      console.info(mutationRecords)
     })
 
     observer.observe(this, {
