@@ -13,32 +13,34 @@
 const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 
 
-document.addEventListener("DOMContentLoaded", loadAniCell(loadJSON()))
+loadAniCell(loadJSON())
+cellSwipeListen()
+
+// 关闭前保存
 window.onbeforeunload = () => saveJSON()
 
-//  document.body.innerHTML += JSON.stringify(loadJSON())
-
 // 事件监听
-document.querySelector('#addAni').addEventListener('click', () => {
+document.querySelector('#addAni').onclick = () => {
   loadAniCell([{}])
-})
+}
 
-//document.querySelectorAll('ani-cell').forEach(ele => {
-  let ele = document.querySelector('#cellBox')
-  ele.onpointerdown = event => {
-    ele.setPointerCapture(event.pointerId)
+function cellSwipeListen() {
+  document.querySelectorAll('ani-cell').forEach(ele => {
+    ele.onpointerdown = event => {
+      ele.setPointerCapture(event.pointerId)
 
-    ele.onpointermove = event => {
-      ele.style.left = event.clientX + 'px'
+      ele.onpointermove = event => {
+        ele.style.left = event.clientX + 'px'
+      }
+
+      ele.onpointerup = () => {
+        ele.onpointermove = null
+        ele.onpointerup = null
+        ele.style.left = null
+      }
     }
-
-    ele.onpointerup = () => {
-      ele.onpointermove = null
-      ele.onpointerup = null
-      ele.style.left = null
-    }
-  }
-//})
+  })
+}
 
 
 
