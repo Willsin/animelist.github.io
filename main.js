@@ -25,7 +25,7 @@ document.querySelector('#addAni').onclick = () => {
 }
 
 function cellSwipe() {
-  document.querySelectorAll('div.ani-cell').forEach(ele => {
+  document.querySelectorAll('ani-cell').forEach(ele => {
     ele.onpointerdown = event_down => {
       ele.setPointerCapture(event_down.pointerId)
       let shiftX = event_down.clientX - ele.getBoundingClientRect().left
