@@ -11,8 +11,6 @@
   height: fit-content;
   margin: 10px 0 0 0;
   overflow: hidden;
-
-  border: 0.2px solid #444;
 }
 
 .ani-cell {
@@ -84,5 +82,10 @@
 
 /*
   .ani-title
-  .ani-description
 */
+
+.ani-description {
+  font-size: 11px;
+  outline: none;
+  white-space: nowrap;
+}
