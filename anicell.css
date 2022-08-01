@@ -11,6 +11,8 @@
   height: fit-content;
   margin: 10px 0 0 0;
   overflow: hidden;
+
+  border: 0.2px solid #444;
 }
 
 .ani-cell {
