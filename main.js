@@ -36,7 +36,6 @@ function cellSwipeListen() {
       ele.onpointerup = () => {
         ele.onpointermove = null
         ele.onpointerup = null
-        ele.style.right = ''
       }
     }
   })

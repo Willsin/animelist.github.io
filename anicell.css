@@ -26,7 +26,7 @@ ani-cell {
   box-shadow: 0 3px 15px var(--wyyyy-shadow);
   border-radius: 20px;
  
-  transition: all 0.2s;
+  transition: box-shadow .2s, right .5s;
 }
 
 .ani-cell:hover {
