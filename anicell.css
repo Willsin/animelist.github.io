@@ -1,8 +1,15 @@
+:root {
+  --wyyyy-bg: rgb(248 249 253);
+  --wyyyy-font: rgb(62 70 91);
+  --wyyyy-shadow: rgba(62 70 91 / 22%);
+  --wyyyy-shadow-dark: rgba(62 70 91 / 32%);
+}
+
 :host {
   position: relative;
   width: 100%;
   height: fit-content;
-  margin: 10px 10px 0 10px;
+  margin: 10px 0 0 0;
   overflow: hidden;
 }
 
@@ -13,6 +20,7 @@
   width: calc(100% - 60px);
   height: 60px;
   padding: 20px;
+  margin: 0 10px;
 
   box-shadow: 0 3px 15px var(--wyyyy-shadow);
   border-radius: 20px;
