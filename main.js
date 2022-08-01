@@ -11,7 +11,7 @@
 */
 
 const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
-
+const cellBox = document.querySelector('#cellBox')
 
 loadAniCell(loadJSON())
 cellSwipe()
@@ -28,10 +28,10 @@ function cellSwipe() {
   document.querySelectorAll('div.ani-cell').forEach(ele => {
     ele.onpointerdown = event_down => {
       ele.setPointerCapture(event_down.pointerId)
-      // let startX = event_down.clientX - ele.getBoundingClientRect().left
+      let shiftX = event_down.clientX - ele.getBoundingClientRect().left
 
       ele.onpointermove = event_move => {
-        ele.style.left = event_move.clientX - ele.getBoundingClientRect().left + 'px'
+        ele.style.left = event_move.clientX - shiftX - cellbox.getBoundingClientRect().left + 'px'
       }
 
       ele.onpointerup = () => {
@@ -56,7 +56,7 @@ function loadAniCell(arr) {
         aniCell.setAttribute(name, obj[name])
       })
 
-      document.querySelector('#cellBox').append(aniCell)
+      cellBox.append(aniCell)
     }
   })
 }
