@@ -30,8 +30,16 @@ function cellSwipe() {
       ele.setPointerCapture(event_down.pointerId)
 
       ele.onpointermove = event_move => {
-        console.log(event_move)
-        console.log(event_down)
+        console.log(
+          event_move.x - event_down.x,
+          event_move.clientX - event_down.clientX,
+          event_move.pageX - event_down.pageX,
+          event_move.screenX - event_down.screenX,
+          event_move.offsetX - event_down.offsetX,
+          event_move.movementX - event_down.movementX,
+          event_move.layerX - event_down.layerX
+        )
+
         ele.style.left = event_move.pageX - event_down.pageX + 'px'
       }
 
@@ -42,7 +50,6 @@ function cellSwipe() {
     }
   })
 }
-
 
 
 
