@@ -31,9 +31,11 @@
 .ani-cell:hover {
   box-shadow: 0 5px 20px var(--wyyyy-shadow-dark);
 }
-/*.ani-cell * {
-  border: 0.3px solid ;
-}*/
+/*
+.ani-cell * {
+  border: 0.3px solid;
+}
+*/
 .ani-wrapper {
   position: absolute;
   top: 0; 
