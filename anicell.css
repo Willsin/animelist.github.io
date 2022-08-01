@@ -5,12 +5,14 @@
   width: 100%;
   height: fit-content;
   padding: 0 0 100px 0;
+  overflow: hidden;
 }
 
 ani-cell {
   position: relative;
   width: 100%;
   height: fit-content;
+  overflow: hidden;
 }
 
 .ani-cell {
