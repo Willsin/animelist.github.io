@@ -13,11 +13,19 @@
 const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 const cellBox = document.querySelector('#cellBox')
 
-loadAniCell(loadJSON())
+// loadAniCell(loadJSON())
+loadAniCell([{
+  title: "Engage Kiss",
+  pic_url: "https://engage-kiss.com/assets/img/top/img_main_pc.jpg",
+  update: "Sunday 01:00",
+  episode: "5",
+  isblur: "false"
+}])
+
 cellSwipe()
 
 // 关闭前保存
-window.onbeforeunload = () => saveJSON()
+// window.onbeforeunload = () => saveJSON()
 
 // 事件监听
 document.querySelector('#addAni').onclick = () => {
