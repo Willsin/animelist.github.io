@@ -36,7 +36,6 @@ document.querySelector('#addAni').onclick = () => {
       }
 
       ele.onpointerup = () => {
-        alert('up')
         ele.onpointermove = null
         ele.onpointerup = null
       }
