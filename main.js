@@ -76,8 +76,8 @@ function loadAniCell(arr) {
       aniCell.innerHTML = `
         <img slot='img' class="ani-img" src="${ obj.pic_url }">
         <span slot='title' class="ani-title">${ obj.title }</span>
-        <span class="ani-description ani-episode">${ obj.episode }</span>
-        <span class="ani-description">${ obj.update }</span> 
+        <span slot='episode' class="ani-description ani-episode">${ obj.episode }</span>
+        <span slot='update' class="ani-description">${ obj.update }</span> 
       `
 
       cellBox.append(aniCell)
