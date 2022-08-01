@@ -10,7 +10,7 @@
 
 ani-cell {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: fit-content;
   overflow: hidden;
 }
