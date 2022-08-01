@@ -31,7 +31,7 @@ function cellSwipe() {
       let startX = event_down.clientX - ele.getBoundingClientRect().left
 
       ele.onpointermove = event_move => {
-        ele.style.left = event_down.clientX - ele.getBoundingClientRect().left - startX + 'px'
+        ele.style.left = event_move.clientX - ele.getBoundingClientRect().left - startX + 'px'
       }
 
       ele.onpointerup = () => {
