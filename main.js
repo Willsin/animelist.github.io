@@ -27,11 +27,11 @@ document.querySelector('#addAni').onclick = () => {
 function cellSwipeListen() {
   document.querySelectorAll('div.ani-cell').forEach(ele => {
     ele.onpointerdown = event_down => {
-      console.log(event_down)
       ele.setPointerCapture(event_down.pointerId)
+      let shift = event_down.clientX - ele.getBoundingClientRect().left
 
       ele.onpointermove = event_move => {
-        ele.style.right = event_down.pageX - event_move.pageX + 'px'
+        ele.style.left = event_move.clientX - shift - ele.getBoundingClientRect().left + 'px'
       }
 
       ele.onpointerup = () => {
