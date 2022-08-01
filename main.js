@@ -31,7 +31,7 @@ function cellSwipeListen() {
       ele.setPointerCapture(event_down.pointerId)
 
       ele.onpointermove = event_move => {
-        ele.style.right = event_down.clientX - event_move.clientX + 'px'
+        ele.style.right = event_down.pageX - event_move.pageX + 'px'
       }
 
       ele.onpointerup = () => {
