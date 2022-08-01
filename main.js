@@ -26,17 +26,17 @@ document.querySelector('#addAni').onclick = () => {
 
 function cellSwipeListen() {
   document.querySelectorAll('div.ani-cell').forEach(ele => {
-    ele.onpointerdown = event => {
-      ele.setPointerCapture(event.pointerId)
+    ele.onpointerdown = event_down => {
+      ele.setPointerCapture(event_down.pointerId)
 
-      ele.onpointermove = event => {
-        ele.style.right = event.clientX + 'px'
+      ele.onpointermove = event_move => {
+        ele.style.right = event_down.clientX - event_move.clientX + 'px'
       }
 
       ele.onpointerup = () => {
         ele.onpointermove = null
         ele.onpointerup = null
-        ele.style.left = ''
+        ele.style.right = ''
       }
     }
   })
@@ -77,14 +77,7 @@ function saveJSON() {
       isblur: item.isblur
     })
   })
-  // localStorage.setItem('aniArr', JSON.stringify(aniArr))
-  localStorage.setItem('aniArr', JSON.stringify([{
-    title: "Engage Kiss",
-    pic_url: "https://engage-kiss.com/assets/img/top/img_main_pc.jpg",
-    update: "Sunday 01:00",
-    episode: "5",
-    isblur: "false"
-  }]))
+  localStorage.setItem('aniArr', JSON.stringify(aniArr))
 }
 
 function loadJSON() {
