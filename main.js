@@ -28,9 +28,10 @@ function cellSwipe() {
   document.querySelectorAll('div.ani-cell').forEach(ele => {
     ele.onpointerdown = event_down => {
       ele.setPointerCapture(event_down.pointerId)
+      let startX = event_down.clientX - ele.getBoundingClientRect().left
 
       ele.onpointermove = event_move => {
-        ele.style.left = event_move.x - event_down.y + 'px'
+        ele.style.left = event_down.clientX - ele.getBoundingClientRect().left - startX + 'px'
       }
 
       ele.onpointerup = () => {
