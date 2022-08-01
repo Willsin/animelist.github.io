@@ -1,3 +1,4 @@
+/*
 customElements.define('ani-cell', class AniCell extends HTMLElement {
   connectedCallback() {
     this.render() // 初次渲染
@@ -36,3 +37,37 @@ customElements.define('ani-cell', class AniCell extends HTMLElement {
     `
   }
 })
+*/
+
+customElements.define('ani-cell', class AniCell extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({mode: 'open'})
+    this.render() // 初次渲染
+  }
+
+  disconnectedCallback() {}
+
+  static get observedAttributes() {
+    return ['isblur']
+  }
+
+  attributeChangedCallback(attributeName, oldValue, newValue) {
+    this.render() // 重新渲染
+  }
+
+  // 渲染函数
+  render() {
+    this.isblur = this.getAttribute('isblur') === 'true'
+    this.shadowRoot.append(document.querySelector('#tmpl').content.cloneNode(true))
+  }
+})
+
+
+
+
+
+
+
+
+
+

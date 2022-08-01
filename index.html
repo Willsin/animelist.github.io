@@ -7,13 +7,43 @@
     <title>AniList</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="main.css" rel="stylesheet">
-    <link href="anicell.css" rel="stylesheet">
   </head>
 
   <body>
 
     <div id="cellBox"></div>
     <button id="addAni">添加</button>
+
+
+
+    <template id="tmpl">
+      <link href="anicell.css" rel="stylesheet">
+      <div class="ani-cell">
+        <!-- <div class="ani-wrapper ${this.isblur ? 'blurself' : ''}"> -->
+        <div class="ani-wrapper">
+          <div class="ani-img-wrapper">
+
+            <slot name='img'></slot>
+            <!-- <img class="ani-img" src="${ this.pic_url }"> -->
+
+          </div>
+          <div class="ani-text">
+
+            <slot name='title'></slot>
+            <!-- <span class="ani-title">${ this.title }</span> -->
+
+            <span class="ani-description">更新至第 <slot name='episode'></slot> 集</span>
+            <!-- <span class="ani-description ani-episode">${ this.episode }</span> -->
+
+            <slot name='update'></slot>
+            <!-- <span class="ani-description">${ this.update }</span> -->
+
+          </div>
+        </div>
+      </div>
+    </template>
+
+
 
     <script src="anicell.js"></script>
     <script src="main.js"></script>

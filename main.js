@@ -14,7 +14,7 @@ const standAniArrName = ['title', 'pic_url', 'update', 'episode', 'isblur']
 const cellBox = document.querySelector('#cellBox')
 
 loadAniCell(loadJSON())
-//cellSwipe()
+cellSwipe()
 
 // 关闭前保存
 window.onbeforeunload = () => saveJSON()
@@ -24,7 +24,7 @@ document.querySelector('#addAni').onclick = () => {
   loadAniCell([{}])
 }
 
-//function cellSwipe() {
+function cellSwipe() {
   document.querySelectorAll('ani-cell').forEach(ele => {
     ele.onpointerdown = event_down => {
       event_down.preventDefault()
@@ -41,8 +41,23 @@ document.querySelector('#addAni').onclick = () => {
       }
     }
   })
-//}
+}
 
+
+
+/*
+  <slot name='img'></slot>
+  <!-- <img class="ani-img" src="${ this.pic_url }"> -->
+
+  <slot name='title'></slot>
+  <!-- <span class="ani-title">${ this.title }</span> -->
+
+  <span class="ani-description">更新至第 <slot name='episode'></slot> 集</span>
+  <!-- <span class="ani-description ani-episode">${ this.episode }</span> -->
+
+  <slot name='update'></slot>
+  <!-- <span class="ani-description">${ this.update }</span> -->
+*/
 
 
 
@@ -51,11 +66,19 @@ function loadAniCell(arr) {
   if (arr === undefined) return
   arr.forEach(obj => {
     if (typeof obj === 'object') {
+
       let aniCell = document.createElement('ani-cell')
 
-      standAniArrName.forEach(name => {
+/*      standAniArrName.forEach(name => {
         aniCell.setAttribute(name, obj[name])
-      })
+      })*/
+
+      aniCell.innerHTML = `
+        <img slot='img' class="ani-img" src="${ obj.pic_url }">
+        <span slot='title' class="ani-title">${ obj.title }</span>
+        <span class="ani-description ani-episode">${ obj.episode }</span>
+        <span class="ani-description">${ obj.update }</span> 
+      `
 
       cellBox.append(aniCell)
     }
